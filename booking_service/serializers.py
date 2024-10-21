@@ -30,13 +30,13 @@ class TrainTypeSerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
-class TrainSerilizer(serializers.Serializer):
+class TrainSerializer(serializers.Serializer):
     class Meta:
         model = Train
         fields = ("id", "name", "cargo_num", "places_in_cargo", "train_type")
 
 
-class RouteSerialixer(serializers.Serializer):
+class RouteSerializer(serializers.Serializer):
     class Meta:
         model = Route
         fields = ("id", "source", "destination", "distance")
