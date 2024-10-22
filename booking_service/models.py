@@ -48,10 +48,13 @@ class Train(models.Model):
 
 class Route(models.Model):
     source = models.ForeignKey(
-        Station, blank=False, on_delete=models.CASCADE, related_name="routes"
+        Station, blank=False, on_delete=models.CASCADE, related_name="routes_source"
     )
     destination = models.ForeignKey(
-        Station, blank=False, on_delete=models.CASCADE, related_name="routes"
+        Station,
+        blank=False,
+        on_delete=models.CASCADE,
+        related_name="routes_destination",
     )
     distance = models.IntegerField()
 
