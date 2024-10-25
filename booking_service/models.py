@@ -8,6 +8,10 @@ class Crew(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
+    
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
 
 
 class Station(models.Model):
@@ -43,7 +47,7 @@ class Train(models.Model):
         return self.cargo_num * self.places_in_cargo
 
     def __str__(self) -> str:
-        return f"{self.name} {self.train_type}"
+        return f"{self.name}"
 
 
 class Route(models.Model):
@@ -58,8 +62,12 @@ class Route(models.Model):
     )
     distance = models.IntegerField()
 
+    @property
+    def route_name(self):
+        return f"{self.source.name} --> {self.destination.name}"
+
     def __str__(self) -> str:
-        return f"{self.source} -> {self.distance}"
+        return f"{self.route_name}"
 
 
 class Trip(models.Model):
