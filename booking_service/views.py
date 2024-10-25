@@ -18,8 +18,12 @@ from booking_service.serializers import (
     RouteSerializer,
     StationSerializer,
     TicketSerializer,
+    TrainDetailSerializer,
+    TrainListSerializer,
     TrainTypeSerializer,
     TrainSerializer,
+    TripDetailSerializer,
+    TripListSerializer,
     TripSerializer,
 )
 
@@ -39,19 +43,43 @@ class TrainTypeViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericVi
     serializer_class = TrainTypeSerializer
 
 
-class TrainViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
-    queryset = Train.objects.all()
+class TrainViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    GenericViewSet,
+):
+    queryset = Train.objects.all().select_related("train_type")
     serializer_class = TrainSerializer
+
+    def get_serializer_class(self):
+        if self.action == "list":
+            return TrainListSerializer
+        if self.action == "retrieve":
+            return TrainDetailSerializer
+        return TrainSerializer
 
 
 class RouteViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
-    queryset = Route.objects.all()
+    queryset = Route.objects.all().select_related("source", "destination")
     serializer_class = RouteSerializer
 
 
-class TripViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
+class TripViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    GenericViewSet,
+):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
+
+    def get_serializer_class(self):
+        if self.action == "list":
+            return TripListSerializer
+        if self.action == "retrieve":
+            return TripDetailSerializer
+        return TripSerializer
 
 
 class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
