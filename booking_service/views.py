@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
 
@@ -7,17 +6,16 @@ from booking_service.models import (
     Order,
     Route,
     Station,
-    Ticket,
     Train,
     TrainType,
     Trip,
 )
 from booking_service.serializers import (
     CrewSerializer,
+    OrderListSerializer,
     OrderSerializer,
     RouteSerializer,
     StationSerializer,
-    TicketSerializer,
     TrainDetailSerializer,
     TrainListSerializer,
     TrainTypeSerializer,
@@ -83,10 +81,18 @@ class TripViewSet(
 
 
 class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
-    queryset = Order.objects.all()
+    queryset = Order.objects.prefetch_related(
+        "tickets__trip__route", "tickets__trip__train", "tickets__trip__crew"
+    )
     serializer_class = OrderSerializer
 
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
 
-class TicketViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
-    queryset = Ticket.objects.all()
-    serializer_class = TicketSerializer
+    def get_serializer_class(self):
+        if self.action == "list":
+            return OrderListSerializer
+        return super().get_serializer_class()
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)

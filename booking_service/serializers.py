@@ -1,3 +1,4 @@
+from django.db import transaction
 from rest_framework import serializers
 
 from booking_service.models import (
@@ -77,7 +78,10 @@ class TrainDetailSerializer(serializers.ModelSerializer):
 
 class RouteSerializer(serializers.ModelSerializer):
     source = serializers.SlugRelatedField(many=False, read_only=True, slug_field="name")
-    destination = serializers.SlugRelatedField(many=False, read_only=True, slug_field="name")
+    destination = serializers.SlugRelatedField(
+        many=False, read_only=True, slug_field="name"
+    )
+
     class Meta:
         model = Route
         fields = ("id", "source", "destination", "distance")
@@ -106,18 +110,35 @@ class TripDetailSerializer(serializers.ModelSerializer):
     crew = CrewSerializer(many=True, read_only=True)
 
     class Meta:
-            model = Trip
-            fields = ("id", "route", "train", "departure_time", "arrival_time", "crew")
-
-
-
-class OrderSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Order
-        fields = ("id", "created_at", "user")
+        model = Trip
+        fields = ("id", "route", "train", "departure_time", "arrival_time", "crew")
 
 
 class TicketSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
-        fields = ("id", "cargo", "seat", "trip", "order")
+        fields = ("id", "cargo", "seat", "trip")
+
+
+class TicketListSerializer(TicketSerializer):
+    trip = TripListSerializer(many=False, read_only=True)
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    tickets = TicketSerializer(many=True, read_only=False, allow_empty=False)
+
+    class Meta:
+        model = Order
+        fields = ("id", "tickets", "created_at")
+
+    def create(self, validated_data) -> Order:
+        with transaction.atomic():
+            tickets_data = validated_data.pop("tickets")
+            order = Order.objects.create(**validated_data)
+            for ticket_data in tickets_data:
+                Ticket.objects.create(order=order, **ticket_data)
+            return order
+
+
+class OrderListSerializer(OrderSerializer):
+    tickets = TicketListSerializer(many=True, read_only=True)

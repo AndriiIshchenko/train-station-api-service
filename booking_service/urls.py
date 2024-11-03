@@ -6,7 +6,6 @@ from booking_service.views import (
     OrderViewSet,
     RouteViewSet,
     StationViewSet,
-    TicketViewSet,
     TrainTypeViewSet,
     TrainViewSet,
     TripViewSet,
@@ -22,7 +21,7 @@ router.register("train_types", TrainTypeViewSet)
 router.register("routes", RouteViewSet)
 router.register("trips", TripViewSet)
 router.register("orders", OrderViewSet)
-router.register("tickets", TicketViewSet)
+
 
 urlpatterns = [
     path("", include(router.urls)),
