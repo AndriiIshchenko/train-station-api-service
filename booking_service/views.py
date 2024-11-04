@@ -1,3 +1,4 @@
+from django.db.models import F, Count
 from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
 
@@ -69,7 +70,15 @@ class TripViewSet(
     mixins.RetrieveModelMixin,
     GenericViewSet,
 ):
-    queryset = Trip.objects.all()
+    queryset = (Trip.objects.all()
+    .select_related("train", "route")
+    .annotate(
+        tickets_available=(
+            F("train__cargo_num") * F("train__places_in_cargo")
+            - Count("tickets")
+        )
+        )
+    )
     serializer_class = TripSerializer
 
     def get_serializer_class(self):

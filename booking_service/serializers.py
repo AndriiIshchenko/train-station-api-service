@@ -99,10 +99,18 @@ class TripListSerializer(serializers.ModelSerializer):
     route = serializers.SlugRelatedField(
         many=False, read_only=True, slug_field="route_name"
     )
+    tickets_available = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Trip
-        fields = ("id", "route", "train", "departure_time", "arrival_time")
+        fields = (
+            "id",
+            "route",
+            "train",
+            "departure_time",
+            "arrival_time",
+            "tickets_available",
+        )
 
 
 class TripDetailSerializer(serializers.ModelSerializer):
