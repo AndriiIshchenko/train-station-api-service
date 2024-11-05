@@ -75,14 +75,14 @@ class TripViewSet(
 ):
     queryset = (
         Trip.objects.all()
-        .select_related("train", "route")
+        .select_related("train", "route__source", "route__destination")
         .annotate(
             tickets_available=(
                 F("train__cargo_num") * F("train__places_in_cargo") - Count("tickets")
             )
         )
     )
-    # serializer_class = TripSerializer
+    serializer_class = TripSerializer
 
     def get_queryset(self):
         date = self.request.query_params.get("departure_time")
@@ -135,7 +135,7 @@ class TripViewSet(
 
 class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
     queryset = Order.objects.prefetch_related(
-        "tickets__trip__route", "tickets__trip__train", "tickets__trip__crew"
+        "tickets__trip__route__source", "tickets__trip__route__destination", "tickets__trip__train", "tickets__trip__crew"
     )
     serializer_class = OrderSerializer
 
