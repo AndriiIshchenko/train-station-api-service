@@ -85,6 +85,7 @@ class TripViewSet(
     serializer_class = TripSerializer
 
     def get_queryset(self):
+        """Retrieve the trips with filters"""
         date = self.request.query_params.get("departure_time")
         source_id_str = self.request.query_params.get("source")
         destination_id_str = self.request.query_params.get("destination")
