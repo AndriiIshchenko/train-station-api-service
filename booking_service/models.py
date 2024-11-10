@@ -1,6 +1,10 @@
+import os
+import uuid
+
 from django.db import models
 from django.conf import settings
 from django.core.exceptions import ValidationError
+from django.utils.text import slugify
 
 
 class Crew(models.Model):
@@ -14,11 +18,17 @@ class Crew(models.Model):
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
 
+def station_image_file_path(instance, filename):
+    _, extension = os.path.splitext(filename)
+    filename = f"{slugify(instance.name)}-{uuid.uuid4()}{extension}"
+
+    return os.path.join("booking_service/uploads/stations/", filename)
 
 class Station(models.Model):
     name = models.CharField(max_length=255, unique=True)
     latitude = models.FloatField()
     longitude = models.FloatField()
+    image = models.ImageField(null=True, upload_to=station_image_file_path)
 
     def __str__(self) -> str:
         return self.name

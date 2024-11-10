@@ -1,7 +1,11 @@
 from datetime import datetime
+
 from django.db.models import F, Count
-from rest_framework import mixins
+from rest_framework import mixins, status
 from rest_framework.viewsets import GenericViewSet
+from rest_framework.response import Response
+from rest_framework.decorators import action
+
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema, OpenApiParameter
 
@@ -19,7 +23,9 @@ from booking_service.serializers import (
     OrderListSerializer,
     OrderSerializer,
     RouteSerializer,
+    StationDetailSerializer,
     StationSerializer,
+    StationImageSerializer,
     TrainDetailSerializer,
     TrainListSerializer,
     TrainTypeSerializer,
@@ -35,9 +41,38 @@ class CrewViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet
     serializer_class = CrewSerializer
 
 
-class StationViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
+class StationViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    GenericViewSet,
+):
     queryset = Station.objects.all()
     serializer_class = StationSerializer
+
+    def get_serializer_class(self):
+        if self.action == "retrieve":
+            return StationDetailSerializer
+        if self.action == "upload_image":
+            return StationImageSerializer
+        return StationSerializer
+
+    @action(
+        methods=["POST"],
+        detail=True,
+        url_path="upload-image",
+        # permission_classes=[IsAminUser]
+    )
+    def upload_image(self, request, pk=None):
+        """Endpoint for uploading image for specific station"""
+        station = self.get_object()
+        serializer = self.get_serializer(station, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class TrainTypeViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
@@ -136,7 +171,10 @@ class TripViewSet(
 
 class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
     queryset = Order.objects.prefetch_related(
-        "tickets__trip__route__source", "tickets__trip__route__destination", "tickets__trip__train", "tickets__trip__crew"
+        "tickets__trip__route__source",
+        "tickets__trip__route__destination",
+        "tickets__trip__train",
+        "tickets__trip__crew",
     )
     serializer_class = OrderSerializer
 
