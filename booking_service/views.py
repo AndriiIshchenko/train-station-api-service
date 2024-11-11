@@ -5,6 +5,7 @@ from rest_framework import mixins, status
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.pagination import PageNumberPagination
 
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema, OpenApiParameter
@@ -169,6 +170,11 @@ class TripViewSet(
         return super().list(request, *args, **kwargs)
 
 
+class OrderPagination(PageNumberPagination):
+    page_size = 2
+    max_page_size = 100
+
+
 class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSet):
     queryset = Order.objects.prefetch_related(
         "tickets__trip__route__source",
@@ -177,6 +183,7 @@ class OrderViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, GenericViewSe
         "tickets__trip__crew",
     )
     serializer_class = OrderSerializer
+    pagination_class = OrderPagination
 
     def get_queryset(self):
         return self.queryset.filter(user=self.request.user)
