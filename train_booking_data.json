@@ -1,0 +1,708 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-10-28T12:47:21.971Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "2024-10-28 12:47:21.968837+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-10-28T14:53:29.598Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "2024-10-28 14:53:29.595680+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-28T14:53:53.361Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Lviv --> Kyiv 2024-10-25 08:01:00+00:00 cargo: 1 seat: 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-28T14:54:28.284Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Kyiv --> Lviv 2024-10-24 18:01:00+00:00 cargo: 2 seat: 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-29T16:34:56.803Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-29T16:35:30.090Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "2024-10-29 16:35:30.089547+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-29T16:36:05.488Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Dnipro --> Kyiv 2024-10-26 10:01:00+00:00 cargo: 3 seat: 20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-10-29T16:36:29.105Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Kyiv --> Dnipro 2024-10-27 04:01:00+00:00 cargo: 6 seat: 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-11-04T11:43:05.343Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Odesa --> Kyiv 2024-11-04 11:42:39+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-11-04T11:45:53.227Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Kyiv --> Odesa 2024-11-06 06:00:00+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-11-04T11:47:31.666Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Lviv --> Kyiv 2024-11-07 19:00:00+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2enlm0ktyxteal0pmg14hph9x8qx3ylk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t5R7D:RBbJ_hc9phehb2XGfl6BLMsFG7paweenYAkvclhlG_0",
+    "expire_date": "2024-11-11T14:53:07.252Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4priqo3p725hmngm06bnutudz4ti6rjp",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t5P91:e2fiAM0OSh-qov0swA0MzWjGN7V6a__WO-KQRD6JSNI",
+    "expire_date": "2024-11-11T12:46:51.756Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hscq2eial21if1p6qnkqmmwdk784m79o",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t2CAS:Do4w5QAJ-RUNNGyc74eKesI2QhrRFsloLPuspqrqPYs",
+    "expire_date": "2024-11-02T16:19:04.856Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qoy1caegh412l5svzm32orugq1fhm6hr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t5p9e:aO8HAQS4Ls8x8djstLykGF_67V0mnY4r9nYcfePX6Rs",
+    "expire_date": "2024-11-12T16:33:14.380Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rklieuzelmyrfdf03r7whsrtu8ipa40p",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t7d96:CXR0XukzJl52AVaWLqf3KF9rArZCrUL1QrpkfE_EU0U",
+    "expire_date": "2024-11-17T16:08:08.787Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vm8q068e6n6x2p2rxiluc0bha30yf6e5",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1tAQ08:uxSSWIn6E_joGLA3VwIx57rvKSoRM0zVWA1QJzAJUQg",
+    "expire_date": "2024-11-25T08:42:24.955Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "whgf2kljgzirdtwgvoofj86piv3xhb13",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoBTsu3fcMZIYZpGpKUtqV8e7apAvd_vfef6mI21ri1mSJE6uLsur0uxGmh8w74DvOt6pTnddlIr0r-qBNj5XleT3cv4OCrXxrT5Kx55AToEWXBEAM9sPAHrKx0HVIBN4R89mzS9iBNRwoM5sgntT7AxP0OR8:1t81pa:Qm_CZcnfZaI7AYoVFyk13taSwmpDOcVl_l-pQSfUcTk",
+    "expire_date": "2024-11-18T18:29:38.324Z"
+  }
+},
+{
+  "model": "booking_service.crew",
+  "pk": 1,
+  "fields": {
+    "first_name": "Albert",
+    "last_name": "Night"
+  }
+},
+{
+  "model": "booking_service.crew",
+  "pk": 2,
+  "fields": {
+    "first_name": "Eva",
+    "last_name": "Frank"
+  }
+},
+{
+  "model": "booking_service.crew",
+  "pk": 3,
+  "fields": {
+    "first_name": "John",
+    "last_name": "Smith"
+  }
+},
+{
+  "model": "booking_service.crew",
+  "pk": 4,
+  "fields": {
+    "first_name": "Mary",
+    "last_name": "Black"
+  }
+},
+{
+  "model": "booking_service.crew",
+  "pk": 5,
+  "fields": {
+    "first_name": "Mark",
+    "last_name": "Laine"
+  }
+},
+{
+  "model": "booking_service.station",
+  "pk": 1,
+  "fields": {
+    "name": "Kyiv",
+    "latitude": 1.0,
+    "longitude": 1.0,
+    "image": "booking_service/uploads/stations/kyiv-cb44d3aa-bfbb-4909-be67-93e038b50654.jpeg"
+  }
+},
+{
+  "model": "booking_service.station",
+  "pk": 2,
+  "fields": {
+    "name": "Lviv",
+    "latitude": 1.0,
+    "longitude": 1.0,
+    "image": ""
+  }
+},
+{
+  "model": "booking_service.station",
+  "pk": 3,
+  "fields": {
+    "name": "Kharkiv",
+    "latitude": 1.0,
+    "longitude": 1.0,
+    "image": ""
+  }
+},
+{
+  "model": "booking_service.station",
+  "pk": 4,
+  "fields": {
+    "name": "Dnipro",
+    "latitude": 1.0,
+    "longitude": 1.0,
+    "image": ""
+  }
+},
+{
+  "model": "booking_service.station",
+  "pk": 5,
+  "fields": {
+    "name": "Odesa",
+    "latitude": 1.0,
+    "longitude": 1.0,
+    "image": ""
+  }
+},
+{
+  "model": "booking_service.traintype",
+  "pk": 1,
+  "fields": {
+    "name": "Regional"
+  }
+},
+{
+  "model": "booking_service.traintype",
+  "pk": 2,
+  "fields": {
+    "name": "Express"
+  }
+},
+{
+  "model": "booking_service.traintype",
+  "pk": 3,
+  "fields": {
+    "name": "CityNightLine"
+  }
+},
+{
+  "model": "booking_service.traintype",
+  "pk": 4,
+  "fields": {
+    "name": "Hight speed"
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 1,
+  "fields": {
+    "name": "Some Train Name",
+    "cargo_num": 10,
+    "places_in_cargo": 40,
+    "train_type": 3
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 2,
+  "fields": {
+    "name": "Some Train Name2",
+    "cargo_num": 11,
+    "places_in_cargo": 44,
+    "train_type": 3
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 3,
+  "fields": {
+    "name": "Intercity",
+    "cargo_num": 9,
+    "places_in_cargo": 56,
+    "train_type": 4
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 4,
+  "fields": {
+    "name": "Dnipro Express",
+    "cargo_num": 9,
+    "places_in_cargo": 50,
+    "train_type": 2
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 5,
+  "fields": {
+    "name": "Odesa Express",
+    "cargo_num": 9,
+    "places_in_cargo": 50,
+    "train_type": 2
+  }
+},
+{
+  "model": "booking_service.train",
+  "pk": 6,
+  "fields": {
+    "name": "Kharkiv Express",
+    "cargo_num": 9,
+    "places_in_cargo": 50,
+    "train_type": 2
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 1,
+  "fields": {
+    "source": 1,
+    "destination": 2,
+    "distance": 540
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 2,
+  "fields": {
+    "source": 2,
+    "destination": 1,
+    "distance": 540
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 3,
+  "fields": {
+    "source": 1,
+    "destination": 3,
+    "distance": 490
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 4,
+  "fields": {
+    "source": 3,
+    "destination": 1,
+    "distance": 490
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 5,
+  "fields": {
+    "source": 1,
+    "destination": 4,
+    "distance": 490
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 6,
+  "fields": {
+    "source": 4,
+    "destination": 1,
+    "distance": 490
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 7,
+  "fields": {
+    "source": 1,
+    "destination": 5,
+    "distance": 480
+  }
+},
+{
+  "model": "booking_service.route",
+  "pk": 8,
+  "fields": {
+    "source": 5,
+    "destination": 1,
+    "distance": 480
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 1,
+  "fields": {
+    "route": 1,
+    "train": 3,
+    "departure_time": "2024-10-24T18:01:00Z",
+    "arrival_time": "2024-10-25T05:26:00Z",
+    "crew": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 2,
+  "fields": {
+    "route": 2,
+    "train": 3,
+    "departure_time": "2024-10-25T08:01:00Z",
+    "arrival_time": "2024-10-25T19:27:00Z",
+    "crew": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 3,
+  "fields": {
+    "route": 6,
+    "train": 4,
+    "departure_time": "2024-10-26T10:01:00Z",
+    "arrival_time": "2024-10-26T23:33:00Z",
+    "crew": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 4,
+  "fields": {
+    "route": 5,
+    "train": 4,
+    "departure_time": "2024-10-27T04:01:00Z",
+    "arrival_time": "2024-10-27T15:33:00Z",
+    "crew": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 5,
+  "fields": {
+    "route": 8,
+    "train": 5,
+    "departure_time": "2024-11-04T11:42:39Z",
+    "arrival_time": "2024-11-05T12:00:00Z",
+    "crew": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 6,
+  "fields": {
+    "route": 7,
+    "train": 5,
+    "departure_time": "2024-11-06T06:00:00Z",
+    "arrival_time": "2024-11-07T18:00:00Z",
+    "crew": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "booking_service.trip",
+  "pk": 7,
+  "fields": {
+    "route": 2,
+    "train": 2,
+    "departure_time": "2024-11-07T19:00:00Z",
+    "arrival_time": "2024-11-08T06:00:00Z",
+    "crew": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 1,
+  "fields": {
+    "created_at": "2024-10-28T12:47:21.968Z",
+    "user": 1
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 2,
+  "fields": {
+    "created_at": "2024-10-28T14:53:29.595Z",
+    "user": 1
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 3,
+  "fields": {
+    "created_at": "2024-10-29T16:35:30.089Z",
+    "user": 2
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 4,
+  "fields": {
+    "created_at": "2024-10-29T17:01:47.961Z",
+    "user": 1
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 5,
+  "fields": {
+    "created_at": "2024-10-29T17:27:17.224Z",
+    "user": 1
+  }
+},
+{
+  "model": "booking_service.order",
+  "pk": 6,
+  "fields": {
+    "created_at": "2024-11-03T16:10:04.328Z",
+    "user": 1
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 1,
+  "fields": {
+    "trip": 2,
+    "order": 1,
+    "cargo": 1,
+    "seat": 6
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 2,
+  "fields": {
+    "trip": 1,
+    "order": 2,
+    "cargo": 2,
+    "seat": 6
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 3,
+  "fields": {
+    "trip": 3,
+    "order": 3,
+    "cargo": 3,
+    "seat": 20
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 4,
+  "fields": {
+    "trip": 4,
+    "order": 3,
+    "cargo": 6,
+    "seat": 5
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 5,
+  "fields": {
+    "trip": 2,
+    "order": 5,
+    "cargo": 2,
+    "seat": 2
+  }
+},
+{
+  "model": "booking_service.ticket",
+  "pk": 6,
+  "fields": {
+    "trip": 3,
+    "order": 6,
+    "cargo": 1,
+    "seat": 2
+  }
+},
+{
+  "model": "user.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$aIST801fBbfLd11mPdOSr0$41Db9RRjk5hiRKOSymf3lYEbuknUk/Ogr0jnzQbsM04=",
+    "last_login": "2024-11-11T08:42:24.943Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-19T16:18:55.355Z",
+    "email": "andrew@andrew.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$YMJLk4B0I2ZanarCyDodop$CCK3SwAH4xbyLc/CKuxiAfCY/ddu6zLvdbh+j1JC1mQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-29T16:34:56.430Z",
+    "email": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$NRIIiXjZOVpXSJ4zd72qh1$NDfVfT7r0G3X+b0nbC0+Pmwac7HUE2SG7JF8tmlHKwM=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-11-11T08:41:30.931Z",
+    "email": "taras@taras.com",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
