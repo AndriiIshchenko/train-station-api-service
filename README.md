@@ -5,9 +5,9 @@
 App for searching train routes an booking tickets.
 
 ## Mission
-This completely useless for commercial use project was created to train in the development of api application based on Django and to blow the minds of my mentors.
+This completely useless project for commercial purposes was created to practice developing API applications based on Django.
 
-The second goal of this project is to demonstrate to future employers that I am capable of writing something more significant than just 'Hello, world'.
+The second goal of this project is to demonstrate to future employers that I am capable of creating something more substantial than just 'Hello, world.'
 
 ## Technology Stack
 
@@ -18,13 +18,14 @@ The second goal of this project is to demonstrate to future employers that I am 
 
 ## Description
 
-This app created to make life easier when yon traveling by train.
+This app was created to make life easier when traveling by train.
 
-In this app you can:
-- find train route by departure and/or arrival station
-- also by departure time - you can see trains on exaxcly time and later
-- in wich route will be information about amount of free seats
-- You can find some photos of staitions
+In this app, you can:
+
+- Find train routes by departure and/or arrival station.
+- Search by departure time to see trains departing at a specific time or later.
+- View routes with information about the number of available seats.
+- Browse photos of train stations
 
 
 
